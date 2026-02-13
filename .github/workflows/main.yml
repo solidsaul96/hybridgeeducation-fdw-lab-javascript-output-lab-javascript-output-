@@ -1,0 +1,19 @@
+name: Tarea JavaScript Output
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: |
+          echo "Verificando entrega de Saul..."
+          # Aquí el robot confirmará que los archivos existen
+          ls ejercicio1.html
+          ls ejercicio2.html
+          echo "¡Archivos encontrados con éxito!"
